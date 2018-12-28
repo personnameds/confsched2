@@ -1,2 +1,6 @@
 venv/
 *.pyc
+SECRET_KEY
+settings_local.py
+client_id.json
+OAUTH2_KEY

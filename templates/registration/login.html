@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+	<h2>Login</h2>
+	<form method="post">
+		{% csrf_token %}
+	  	{{ form.as_p }}
+	  	<input type="submit" name="Login">
+	  	<input type="hidden" name="next" value="{% url 'homepage-view' %}">
+	  	<p><a href="{% url "social:begin" "google-oauth2" %}">Google</a></p>
+	</form>
+{% endblock %}
